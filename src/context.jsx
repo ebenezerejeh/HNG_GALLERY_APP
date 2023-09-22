@@ -50,6 +50,7 @@ const AppProvider = ({children})=>{
 
         if(dataSecond){
             setFilteredItem(dataSecond)
+            console.log(dataSecond)
           setLoading(false);
         }else if(dataSecond===""){
           setFilteredItem([])
@@ -59,6 +60,7 @@ const AppProvider = ({children})=>{
 
 
     },[searchItem]);
+
 
     return (
         <AppContext.Provider

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { data } from '../data'
 import Loading from '../pages/loading'
@@ -13,7 +13,9 @@ const ImagesContainer = () => {
   const {loading, filteredItem} = useGlobalContext();
   const [stores, setStores]= useState(filteredItem)
 
+  console.log(filteredItem);
   console.log(stores);
+  
 
   const handleDragDrop=(results)=> {
     const {source, destination, type} = results;
@@ -34,7 +36,9 @@ const ImagesContainer = () => {
       }
       }
 
-
+      useEffect(()=>{
+        setStores(filteredItem)
+      },[filteredItem])
 
 
 
