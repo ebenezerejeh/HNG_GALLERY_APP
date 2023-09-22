@@ -36,7 +36,7 @@ const Header = () => {
                             
                         
                         
-                            <span className='searchIcon'><i className="material-icons">search</i></span>
+                            
     
                         
     
